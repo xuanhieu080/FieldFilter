@@ -8,8 +8,8 @@ trait HasFlexibleFields
 {
     protected function filterFields($model, array $requested): array
     {
-        $config = config("api_fields.resources.{$this->resourceClass()}", []);
-        $strict = config('api_fields.strict');
+        $config = config("fields.resources.{$this->resourceClass()}", []);
+        $strict = config('fields.strict');
         $fields = $config['fields'] ?? [];
         $rels = $config['relations'] ?? [];
         $res = [];
